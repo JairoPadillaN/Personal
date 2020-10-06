@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\pruebaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,16 +13,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', pruebaController::class);
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 Route::get('Helloworld', function(){
     return view('helloworld');
  });
  Route::get('investigacion', function (){
       return View::make ('investigacion'); 
 });
+
 
 
 
