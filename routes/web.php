@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\pruebaController;
 use Illuminate\Support\Facades\Route;
-
+use app\Http\Controllers\CursoController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AlumnosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,17 +14,18 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', pruebaController::class);
+/*
+Route::get('/', HomeController::class);
+Route::get('alumnos',[AlumnosController::class,'index']);
+Route::get('alumnos/create', [AlumnosController::class, 'create']);
+Route::get('alumnos/{alumno}',[AlumnosController::class, 'show']);
+Route::group(['prefix'=>'api'], function (){
+Route::apiResource('alumno','')
+*/
+Route::group(['prefix'=>'api'], function (){
+Route::apiResource('alumnos', AlumnosController::class);
 
-
-Route::get('Helloworld', function(){
-    return view('helloworld');
- });
- Route::get('investigacion', function (){
-      return View::make ('investigacion'); 
 });
-
-
 
 
 
