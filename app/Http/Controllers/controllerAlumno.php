@@ -24,14 +24,34 @@ class controllerAlumno extends Controller
         $alumno-save();
         return redirect()->route('alumnos.show',$alumno);
 }
-*/
-public function _construct (Alumno $alumno){
+*/public function _construct (Alumno $alumno){
     $this->alumno=$alumno;
 }
 
- public function store(StoreAlumno $request){
-      return $request;
-      $alumno= $this->alumno->create($request->all());
-      return $alumno;
-      return response()->json(new Alumno($materia), 201);
+public function store(Alumnos $request){
+    return $request;
+    $alumno= $this->alumno->create($request->all());
+    return $alumno;
+    return response()->json(new Alumno($materia), 201);
+}
+
+  public function index() {
+
+      $alumnos = Alumno::all();
+      return $alumnos;
+
+      return view('alumnos.index');
+          
   }
+  public function create(){
+      return view('alumnos.create');
+  }
+  public function show($id){
+      $alumno = Alumno::find($id);
+      return $alumno;
+      return view ('alumnos.show', compact('alumno'));
+  }
+
+  
+
+}
