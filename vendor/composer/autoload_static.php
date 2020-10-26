@@ -515,11 +515,16 @@ class ComposerStaticInit3ed969ac9bb86e97b425b30e6f2f33d7
     );
 
     public static $classMap = array (
+        'App\\Alumnos' => __DIR__ . '/../..' . '/app/Providers/Alumnos.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\Alumnoscontroller' => __DIR__ . '/../..' . '/app/Http/Controllers/Alumnoscontroller.php',
+        'App\\Http\\Controllers\\ArticulosController' => __DIR__ . '/../..' . '/app/Http/Controllers/ArticulosController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\CursoController' => __DIR__ . '/../..' . '/app/Http/Controllers/CursoController.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\Materias\\controllerMaterias' => __DIR__ . '/../..' . '/app/Http/Controllers/Materias/controllerMaterias.php',
-        'App\\Http\\Controllers\\controllerAlumno' => __DIR__ . '/../..' . '/app/Http/Controllers/controllerAlumno.php',
+        'App\\Http\\Controllers\\pruebaController' => __DIR__ . '/../..' . '/app/Http/Controllers/pruebaController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -529,6 +534,10 @@ class ComposerStaticInit3ed969ac9bb86e97b425b30e6f2f33d7
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\Alumnos' => __DIR__ . '/../..' . '/app/Http/Requests/Alumnos.php',
+        'App\\Http\\Requests\\StoreAlumno' => __DIR__ . '/../..' . '/app/Http/Requests/StoreAlumno.php',
+        'App\\Models\\Alumno' => __DIR__ . '/../..' . '/app/Models/Alumno.php',
+        'App\\Models\\Post' => __DIR__ . '/../..' . '/app/Models/Post.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',

@@ -6,11 +6,16 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Alumnos' => $baseDir . '/app/Providers/Alumnos.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\Alumnoscontroller' => $baseDir . '/app/Http/Controllers/Alumnoscontroller.php',
+    'App\\Http\\Controllers\\ArticulosController' => $baseDir . '/app/Http/Controllers/ArticulosController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\CursoController' => $baseDir . '/app/Http/Controllers/CursoController.php',
+    'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\Materias\\controllerMaterias' => $baseDir . '/app/Http/Controllers/Materias/controllerMaterias.php',
-    'App\\Http\\Controllers\\controllerAlumno' => $baseDir . '/app/Http/Controllers/controllerAlumno.php',
+    'App\\Http\\Controllers\\pruebaController' => $baseDir . '/app/Http/Controllers/pruebaController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
@@ -20,6 +25,10 @@ return array(
     'App\\Http\\Middleware\\TrustHosts' => $baseDir . '/app/Http/Middleware/TrustHosts.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+    'App\\Http\\Requests\\Alumnos' => $baseDir . '/app/Http/Requests/Alumnos.php',
+    'App\\Http\\Requests\\StoreAlumno' => $baseDir . '/app/Http/Requests/StoreAlumno.php',
+    'App\\Models\\Alumno' => $baseDir . '/app/Models/Alumno.php',
+    'App\\Models\\Post' => $baseDir . '/app/Models/Post.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',

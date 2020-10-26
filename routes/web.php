@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\CursoController;
+use App\Http\Controllers\CursoController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AlumnosController;
 /*
@@ -24,6 +24,7 @@ Route::apiResource('alumno','')
 */
 Route::group(['prefix'=>'api'], function (){
 Route::apiResource('alumnos', AlumnosController::class);
+//Route::put('alumnos/{alumno]',[AlumnosController::class, 'update'])->name('alumnos.update');
 
 });
 

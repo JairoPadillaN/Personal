@@ -1,14 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 
 use App\Models\Alumno;
 use App\Http\Requests\StoreAlumno;
+use App\Http\Requests\Alumnos;
 
-
-class controllerAlumno extends Controller
+class Alumnoscontroller extends Controller
 {
     /*
     public function store(StoreAlumnos $request){
@@ -24,7 +23,9 @@ class controllerAlumno extends Controller
         $alumno-save();
         return redirect()->route('alumnos.show',$alumno);
 }
-*/public function _construct (Alumno $alumno){
+*/
+
+public function _construct (Alumno $alumno){
     $this->alumno=$alumno;
 }
 
@@ -43,13 +44,27 @@ public function store(Alumnos $request){
       return view('alumnos.index');
           
   }
+
   public function create(){
       return view('alumnos.create');
   }
+
   public function show($id){
       $alumno = Alumno::find($id);
       return $alumno;
       return view ('alumnos.show', compact('alumno'));
+  }
+
+  public function update(Alumnos $request){
+    return $request;
+    return view ('alumnos.update',compact('alumno'));
+
+  }
+
+  public function destroy($id){
+    $alumno=Alumno::findOrFail($id);
+    $alumno->delete();
+
   }
 
   
