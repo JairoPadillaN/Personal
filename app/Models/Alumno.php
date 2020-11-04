@@ -4,8 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Materia;
 
 class Alumno extends Model
 {
-    use HasFactory;
+    public function findByEmail($email){
+        return static::where(compact('email'))->first();
+    }
+
+    public function materia(){
+        return $this->belongsTo(Materia::class);
+    }
 }
