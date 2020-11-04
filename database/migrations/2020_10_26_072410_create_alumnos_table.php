@@ -34,4 +34,7 @@ class CreateAlumnosTable extends Migration
     {
         Schema::dropIfExists('alumnos');
     }
+
+    
+
 }

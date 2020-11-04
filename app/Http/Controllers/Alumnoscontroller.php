@@ -36,14 +36,12 @@ public function store(Alumnos $request){
     return response()->json(new Alumno($materia), 201);
 }
 
-  public function index() {
+public function index(){
+  $alumnos = Alumno::all();
+  return $alumnos;
 
-      $alumnos = Alumno::all();
-      return $alumnos;
-
-      return view('alumnos.index');
-          
-  }
+  return view('alumnos.index');
+}
 
   public function create(){
       return view('alumnos.create');
