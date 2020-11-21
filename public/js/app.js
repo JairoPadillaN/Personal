@@ -1922,7 +1922,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://127.0.0.1:8000/api/alumnos').then(function (response) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://pokeapi.co/api/v2/pokemon/ditto').then(function (response) {
       console.log(response);
     });
   }

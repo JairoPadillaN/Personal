@@ -11,7 +11,7 @@
             }
         },
         mounted(){
-            axios.get('http://127.0.0.1:8000/api/alumnos')
+            axios.get('https://pokeapi.co/api/v2/pokemon/ditto')
 
         .then(function(response){
             console.log(response)
